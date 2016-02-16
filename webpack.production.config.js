@@ -4,7 +4,7 @@ var node_modules_dir = path.resolve(__dirname, 'node_modules');
 
 var config = {
   entry: path.resolve(__dirname, 'app/main.js'),
-  vendors: ['react', 'react-dom'],
+  vendors: ['react', 'react-dom', 'redux', 'react-redux'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.[hash].js'
