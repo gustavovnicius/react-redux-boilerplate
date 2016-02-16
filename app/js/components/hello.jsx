@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../css/components/component.scss'
+import '../../css/components/hello.scss'
 
 export default class Hello extends React.Component {
   render() {
     return <div>
-      <h1>Hello worldasdasd</h1>
+      <h1>Hello world</h1>
     </div>;
   }
 }

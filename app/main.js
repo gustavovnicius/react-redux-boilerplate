@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './js/components/component.jsx';
+import Hello from './js/components/hello.jsx';
 
 main();
 
