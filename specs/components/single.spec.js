@@ -1,10 +1,10 @@
-var React = require('react');
-var TestUtils = require('react/lib/ReactTestUtils');
-var Hello = require('../../app/js/components/hello.jsx');
+import React from 'react';
+import TestUtils from 'react/lib/ReactTestUtils';
+import App from '../../app/components/App.js';
 
-describe('Hello', () => {
+describe('App', () => {
   it('renders', () => {
-    var element = TestUtils.renderIntoDocument(React.createElement('Hello'));
+    var element = TestUtils.renderIntoDocument(React.createElement('App'));
     expect(element).toBeTruthy();
   });
 });

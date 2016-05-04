@@ -11,7 +11,6 @@ module.exports = function(config) {
       'specs/tests.webpack.js': ['webpack'],
     },
     reporters: ['dots'],
-    singleRun: true,
     webpack: {
       module: {
         loaders: [{
