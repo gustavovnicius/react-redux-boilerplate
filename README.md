@@ -1,4 +1,4 @@
-** Webgoal React / Redux Boilerplate **
+** React / Redux Boilerplate **
 ======================================
 
 Template para aplicações front-end utilizando React e Redux.
