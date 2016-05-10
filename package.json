@@ -14,13 +14,13 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
-    "core-js": "^2.3.0",
+    "core-js": "^2.4.0",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "jasmine": "^2.4.1",
     "karma": "^0.13.22",
-    "karma-cli": "^0.1.2",
-    "karma-jasmine": "^1.0.0",
+    "karma-cli": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-webpack": "^1.7.0",
     "node-sass": "^3.7.0",
@@ -38,6 +38,6 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.0.1"
+    "redux-thunk": "^2.1.0"
   }
 }
