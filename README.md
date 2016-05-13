@@ -1,32 +1,74 @@
 ** React / Redux Boilerplate **
 ======================================
 
-Template para aplicações front-end utilizando React e Redux.
+Boilerplate for front-end apps with React and Redux.
 
-** Principais padrões utilizados **
+** Main tools **
 -----------------------------------
 
-- **react**: Lib para construção de interfaces. Seu conceito principal são
-componentes.
+- **react**: Lib for build UIs. Has its main concept based upon components
 
-- **redux**: State container para aplicações front-end. Pode ser utilizado em conjunto
-com o React para construção de aplicações javascript consistentes e fáceis de testar.
+- **react-hmr**: Hot reload for react components.
 
-- **redux-thunk**: Lib utilizada para ações assíncronas
+- **redux**: State container. Compatible with React, allow to easily share state between components.
 
-** Padrões para desenvolvimento **
+- **redux-thunk**: Middleware to dispatch async actions
+
+** Another tools / patterns **
 ----------------------------------
 
-- **webpack**: Ele permite que você utilize todas as facilidades do ES6, ES7 e
-NodeJS no geral, empacotando sua aplicação e dependências em um bundle que os
-navegadores conseguem entender.
+- **webpack**: Bundle and minify your app into a single .js (its a poor explanation, I'll improve it ;) ), integrates with babel (and has another loaders too, so you can write good ol' modular JS with it.
 
-- **karma**: TODO: add descrição
+- **karma**: Test runner framework. Allow you to test your js code directly on browsers.
 
-- **jasmine**: TODO: add descrição
+- **jasmine**: BDD for JS
 
-- **redux-logger**: TODO: add descrição
+- **redux-logger**: Logger middleware for easily debugging your app.
 
-- **babel**: Transpiler para javascript. Ele transpila seu código com ES6, ES7,
-JSX, Coffee e várias outras coisas para js "padrão", que o NodeJS, Webpack e os
-navegadores conseguem interpretar.
+- **babel**: JS transpiler. With it you can rely upon ES6, ES7, Stage-0 JSX and a lot of other features. You can use the next generation JS today.
+
+** Getting started **
+---------------------
+
+- Git clone this repo
+
+```sh
+git clone git@github.com:gustavovnicius/react-redux-boilerplate.git
+```
+
+- [Install NVM](https://github.com/creationix/nvm#install-script) and a [pick](https://github.com/creationix/nvm#usage) a node version.
+
+- In this repo root dir, run `npm install` (`npm i` for friends)
+
+** Running **
+
+```sh
+npm start
+```
+- In a browser of your choice (as long as it is Chromium :D ) hit [localhost:8080](localhost:8080)
+
+- You are good to go :)
+
+** Testing **
+
+This repo has a small example test, just take a look at [it](https://github.com/gustavovnicius/react-redux-boilerplate/blob/master/specs/components/single.spec.js)
+
+To run your test suite:
+```sh
+  npm test
+```
+
+Of course you can customize the [karma.conf.js](https://github.com/gustavovnicius/react-redux-boilerplate/blob/master/karma.conf.js) file to best fit your needs (currently it runs your tests just on PhantomJS).
+
+** Bundling for production **
+
+```sh
+npm run deploy
+```
+
+It will generate a bundled js file inside dist dir.
+
+** Contributing **
+------------------
+
+Feel free to open an issue, PR or reaching me if you have any questions.
