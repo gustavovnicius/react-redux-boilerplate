@@ -1,33 +1,33 @@
-** React / Redux Boilerplate **
+React / Redux Boilerplate
 ======================================
 
 Boilerplate for front-end apps with React and Redux.
 
-** Main tools **
+Main tools
 -----------------------------------
 
-- **react**: Lib for build UIs. Has its main concept based upon components
+- react: Lib for build UIs. Has its main concept based upon components
 
-- **react-hmr**: Hot reload for react components.
+- react-hmr: Hot reload for react components.
 
-- **redux**: State container. Compatible with React, allow to easily share state between components.
+- redux: State container. Compatible with React, allow to easily share state between components.
 
-- **redux-thunk**: Middleware to dispatch async actions
+- redux-thunk: Middleware to dispatch async actions
 
-** Another tools / patterns **
+Another tools / patterns
 ----------------------------------
 
-- **webpack**: Bundle and minify your app into a single .js (its a poor explanation, I'll improve it ;) ), integrates with babel (and has another loaders too, so you can write good ol' modular JS with it.
+- webpack: Bundle and minify your app into a single .js (its a poor explanation, I'll improve it ;) ), integrates with babel (and has another loaders too, so you can write good ol' modular JS with it.
 
-- **karma**: Test runner framework. Allow you to test your js code directly on browsers.
+- karma: Test runner framework. Allow you to test your js code directly on browsers.
 
-- **jasmine**: BDD for JS
+- jasmine: BDD for JS
 
-- **redux-logger**: Logger middleware for easily debugging your app.
+- redux-logger: Logger middleware for easily debugging your app.
 
-- **babel**: JS transpiler. With it you can rely upon ES6, ES7, Stage-0 JSX and a lot of other features. You can use the next generation JS today.
+- babel: JS transpiler. With it you can rely upon ES6, ES7, Stage-0 JSX and a lot of other features. You can use the next generation JS today.
 
-** Getting started **
+Getting started 
 ---------------------
 
 - Git clone this repo
@@ -40,7 +40,7 @@ git clone git@github.com:gustavovnicius/react-redux-boilerplate.git
 
 - In this repo root dir, run `npm install` (`npm i` for friends)
 
-** Running **
+Running
 
 ```sh
 npm start
@@ -49,7 +49,7 @@ npm start
 
 - You are good to go :)
 
-** Testing **
+Testing
 
 This repo has a small example test, just take a look at [it](https://github.com/gustavovnicius/react-redux-boilerplate/blob/master/specs/components/single.spec.js)
 
@@ -60,7 +60,7 @@ To run your test suite:
 
 Of course you can customize the [karma.conf.js](https://github.com/gustavovnicius/react-redux-boilerplate/blob/master/karma.conf.js) file to best fit your needs (currently it runs your tests just on PhantomJS).
 
-** Bundling for production **
+Bundling for production
 
 ```sh
 npm run deploy
@@ -68,7 +68,7 @@ npm run deploy
 
 It will generate a bundled js file inside dist dir.
 
-** Contributing **
+Contributing
 ------------------
 
 Feel free to open an issue, PR or reaching me if you have any questions.
