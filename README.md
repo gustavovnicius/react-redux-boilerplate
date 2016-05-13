@@ -25,9 +25,9 @@ Another tools / patterns
 
 - redux-logger: Logger middleware for easily debugging your app.
 
-- babel: JS transpiler. With it you can rely upon ES6, ES7, Stage-0 JSX and a lot of other features. You can use the next generation JS today.
+- babel: JS transpiler. With it you can rely upon ES6, ES7, Stage-0, JSX and a lot of other features. You can use the next generation JS today.
 
-Getting started 
+Getting started
 ---------------------
 
 - Git clone this repo
