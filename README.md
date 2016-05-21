@@ -1,5 +1,6 @@
 React / Redux Boilerplate
 ======================================
+[![Build Status](https://travis-ci.org/gustavovnicius/react-redux-boilerplate.svg?branch=master)](https://travis-ci.org/gustavovnicius/react-redux-boilerplate)
 
 Boilerplate for front-end apps with React and Redux.
 
