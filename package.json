@@ -28,15 +28,15 @@
     "redux-logger": "^2.6.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.0",
+    "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "immutable": "^3.8.1",
     "react": "^15.0.2",
-    "react-dom": "^15.0.2",
+    "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
-    "react-router": "^2.4.0",
+    "react-router": "^2.4.1",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0"
   }
