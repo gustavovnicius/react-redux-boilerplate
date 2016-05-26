@@ -2,7 +2,7 @@ React / Redux Boilerplate
 ======================================
 [![Build Status](https://travis-ci.org/gustavovnicius/react-redux-boilerplate.svg?branch=master)](https://travis-ci.org/gustavovnicius/react-redux-boilerplate)
 
-Boilerplate for front-end apps with React and Redux.
+Boilerplate for front-end apps with React and Redux. The goal is to provide a simple and functional boilerplate that you could bootstrap your project with. Enjoy it! :sunglasses: (Any feedback will be welcome!)
 
 Main tools
 -----------------------------------
