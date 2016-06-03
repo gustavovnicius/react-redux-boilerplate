@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
   entry: path.resolve(__dirname, 'app/main.js'),
@@ -26,7 +27,21 @@ var config = {
     }]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: 'build/index.html'
+    }),
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress:{
+        warnings: true
+      }
+    })
   ]
 };
 
