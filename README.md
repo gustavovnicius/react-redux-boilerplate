@@ -75,3 +75,8 @@ Contributing
 ------------------
 
 Feel free to open an issue, PR or reaching me if you have any questions.
+
+TODO
+----
+
+- Redux Saga
