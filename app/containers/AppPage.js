@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import App from '../components/App'
-import { thunkExample } from '../actions/example'
+import App from 'components/App'
+import { thunkExample } from 'actions/example'
 
 let mapStateToProps = state => ({})
 

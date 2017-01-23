@@ -13,6 +13,9 @@ module.exports = function(config) {
     reporters: ['dots'],
     singleRun: true,
     webpack: {
+      resolve:{
+        modulesDirectories: ['app', 'node_modules'],
+      },
       module: {
         loaders: [{
           test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx

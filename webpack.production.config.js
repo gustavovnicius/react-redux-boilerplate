@@ -5,6 +5,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
   entry: path.resolve(__dirname, 'app/main.js'),
+  resolve:{
+    modulesDirectories: ['app', 'node_modules'],
+  },
   vendors: ['react', 'react-dom', 'redux', 'react-redux', 'immutable', 'react-router', 'redux-thunk'],
   output: {
     path: path.resolve(__dirname, 'dist'),

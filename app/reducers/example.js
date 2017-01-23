@@ -1,6 +1,6 @@
 import {
   EXAMPLE
-} from '../actions/example'
+} from 'actions/example'
 
 export default (state = {}, action) => {
   switch (action.type) {
