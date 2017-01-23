@@ -2,7 +2,7 @@
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js",
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --devtool eval --progress --colors --hot --content-base build",
-    "deploy": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p --config webpack.production.config.js",
+    "deploy": "rm -rf dist && NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p --config webpack.production.config.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },

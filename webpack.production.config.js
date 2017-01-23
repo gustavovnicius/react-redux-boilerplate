@@ -4,14 +4,16 @@ var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
-  entry: path.resolve(__dirname, 'app/main.js'),
+  entry: {
+    app: path.resolve(__dirname, 'app/main.js'),
+    vendor: ['react', 'react-dom', 'redux', 'react-redux', 'immutable', 'react-router', 'redux-thunk']
+  },
   resolve:{
     modulesDirectories: ['app', 'node_modules'],
   },
-  vendors: ['react', 'react-dom', 'redux', 'react-redux', 'immutable', 'react-router', 'redux-thunk'],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'app.[hash].js'
+    filename: '[name].[chunkhash].js'
   },
   module: {
     loaders: [{
@@ -30,19 +32,25 @@ var config = {
     }]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+    new webpack.optimize.CommonsChunkPlugin('vendor', '[name].[chunkhash].js'),
     new HtmlWebpackPlugin({
       hash: true,
-      template: 'build/index.html'
+      template: 'build/index.html.template'
     }),
     new webpack.DefinePlugin({
-      'process.env':{
-        'NODE_ENV': JSON.stringify('production')
-      }
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compress:{
-        warnings: true
+      compress: {
+        warnings: false,
+        sequences: true,
+        dead_code: true,
+        conditionals: true,
+        booleans: true,
+        unused: true,
+        if_return: true,
+        join_vars: true,
+        drop_console: true
       }
     })
   ]
