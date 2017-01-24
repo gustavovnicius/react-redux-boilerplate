@@ -22,9 +22,7 @@ Another tools / patterns
 
 - webpack: Bundle and minify your app into a single .js (its a poor explanation, I'll improve it ;) ), integrates with babel (and has another loaders too, so you can write good ol' modular JS with it.
 
-- karma: Test runner framework. Allow you to test your js code directly on browsers.
-
-- jasmine: BDD for JS
+- jest: Painless JavaScript test framework.
 
 - redux-logger: Logger middleware for easily debugging your app.
 
@@ -54,14 +52,14 @@ npm start
 
 Testing
 
-This repo has a small example test, just take a look at [it](https://github.com/gustavovnicius/react-redux-boilerplate/blob/master/specs/components/single.spec.js)
+This repo has a small example test, just take a look at [it](https://github.com/gustavovnicius/react-redux-boilerplate/blob/master/spec/components/single.spec.js)
 
 To run your test suite:
 ```sh
-  npm test
+npm test
+# or
+npm run test:watch
 ```
-
-Of course you can customize the [karma.conf.js](https://github.com/gustavovnicius/react-redux-boilerplate/blob/master/karma.conf.js) file to best fit your needs (currently it runs your tests just on PhantomJS).
 
 Bundling for production
 
