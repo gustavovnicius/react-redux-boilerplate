@@ -57,11 +57,20 @@ const config = {
   },
   plugins: [
     extractSass,
+    new webpack.NamedModulesPlugin(),
+    new webpack.NamedChunksPlugin((chunk) => {
+      if (chunk.name) {
+        return chunk.name;
+      }
+      return chunk.modules.map(m => path.relative(m.context, m.request)).join("_");
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: ({ resource }) => /node_modules/.test(resource),
     }),
-    new webpack.optimize.CommonsChunkPlugin('runtime'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'runtime',
+    }),
     new WebpackMd5Hash(),
     new AssetsPlugin({
       path: path.resolve(__dirname, 'dist'),
@@ -85,8 +94,23 @@ const config = {
         if_return: true,
         join_vars: true,
         drop_console: true,
+        drop_debugger: true,
       },
     }),
+    {
+      apply(compiler) {
+        compiler.plugin("compilation", (compilation) => {
+          compilation.plugin("before-module-ids", (modules) => {
+            modules.forEach((module) => {
+              if (module.id !== null) {
+                return;
+              }
+              module.id = module.identifier();
+            });
+          });
+        });
+      }
+    },
   ],
 };
 
