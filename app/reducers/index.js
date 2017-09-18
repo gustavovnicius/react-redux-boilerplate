@@ -3,6 +3,6 @@ import example from 'reducers/example';
 import { combineReducers } from 'redux';
 
 export default combineReducers({
-  example
+  example,
   // Add more reducers here
-})
+});

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+<div>
+  <button
+    onClick={undefined}
+  >
+     Click me! 
+  </button>
+</div>
+`;

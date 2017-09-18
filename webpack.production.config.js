@@ -1,22 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
-const node_modules_dir = path.resolve(__dirname, 'node_modules');
+
 const WebpackMd5Hash = require('webpack-md5-hash');
 const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
-    disable: process.env.NODE_ENV === "development"
+  filename: '[name].[contenthash].css',
+  disable: process.env.NODE_ENV === 'development',
 });
 
 const config = {
   entry: {
-    app: path.resolve(__dirname, 'app/main.js'),
+    app: path.resolve(__dirname, 'app/main.jsx'),
   },
-  resolve:{
+  resolve: {
     modules: ['app', 'node_modules'],
+    extensions: ['.js', '.jsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -28,31 +29,31 @@ const config = {
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        exclude: [node_modules_dir]
+        exclude: [path.resolve(__dirname, 'node_modules')],
       },
       {
         test: /\.scss$/,
         use: extractSass.extract({
           use: [
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
             },
             {
-              loader: 'sass-loader'
-            }
+              loader: 'sass-loader',
+            },
           ],
           fallback: 'style-loader',
-        })
+        }),
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&minetype=application/font-woff'
+        loader: 'url-loader?limit=10000&minetype=application/font-woff',
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader'
-      }
-    ]
+        loader: 'file-loader',
+      },
+    ],
   },
   plugins: [
     extractSass,
@@ -68,10 +69,10 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      template: 'build/index.html.template'
+      template: 'build/index.html.template',
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -83,10 +84,10 @@ const config = {
         unused: true,
         if_return: true,
         join_vars: true,
-        drop_console: true
-      }
-    })
-  ]
+        drop_console: true,
+      },
+    }),
+  ],
 };
 
 module.exports = config;

@@ -1,13 +1,12 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import App from 'components/App'
-import { thunkExample } from 'actions/example'
+import App from 'components/App';
+import { thunkExample } from 'actions/example';
 
-let mapStateToProps = state => ({})
+const mapStateToProps = () => ({});
 
-let mapDispatchToProps = dispatch => ({
-  thunkExample: () => dispatch(thunkExample())
-})
+const mapDispatchToProps = dispatch => ({
+  thunkExample: () => dispatch(thunkExample()),
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App);

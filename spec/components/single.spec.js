@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactTestUtils from 'react-dom/test-utils'
-import App from 'components/App.js';
+import renderer from 'react-test-renderer';
+import App from 'components/App';
 
 describe('App', () => {
   it('renders', () => {
-    var element = ReactTestUtils.renderIntoDocument(React.createElement('App'));
-    expect(element).toBeTruthy();
+    const tree = renderer.create(React.createElement(App)).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
