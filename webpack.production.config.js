@@ -5,6 +5,8 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
   filename: '[name].[contenthash].css',
@@ -79,6 +81,7 @@ const config = {
     new HtmlWebpackPlugin({
       hash: true,
       template: 'build/index.html.template',
+      xhtml: true,
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -111,6 +114,25 @@ const config = {
         });
       }
     },
+    new WebpackPwaManifest({
+      name: 'React App',
+      short_name: 'MyReactApp',
+      description: 'My awesome Progressive Web App!',
+      start_url: ".",
+      background_color: '#ffffff',
+      theme_color: '#ffffff',
+      ios: true,
+      icons: [
+        {
+          src: path.resolve(__dirname, 'build/icon.png'),
+          sizes: [96, 128, 192, 256, 384, 512]
+        },
+        {
+          src: path.resolve(__dirname, 'build/icon.png'),
+          size: '1024x1024'
+        }
+      ]
+    }),
   ],
 };
 
