@@ -2,7 +2,7 @@ React / Redux Boilerplate
 =========================
 [![Build Status](https://travis-ci.org/gustavovnicius/react-redux-boilerplate.svg?branch=master)](https://travis-ci.org/gustavovnicius/react-redux-boilerplate)
 
-<a href='https://facebook.github.io/react/'><img src='https://facebook.github.io/react/img/logo.svg' height='60'></a> <a href='http://redux.js.org'><img src='https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png' height='60'></a>
+<a href='https://facebook.github.io/react/'><img src='https://scontent.fpoa8-2.fna.fbcdn.net/v/t39.2365-6/11057038_1603675009889853_2020621244_n.png?oh=9ec2250985111d5a9ef21d32a8e45d24&oe=5A51590B' height='60'></a> <a href='http://redux.js.org'><img src='https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png' height='60'></a>
 
 Boilerplate for front-end apps with React and Redux. The goal is to provide a simple and functional boilerplate that you could bootstrap your project with. Enjoy it! :sunglasses: (Any feedback will be welcome!)
 
